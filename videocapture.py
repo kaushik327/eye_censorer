@@ -19,7 +19,7 @@ while 1:
         for (ex,ey,ew,eh) in eyes:
             cv2.rectangle(roi, (ex,ey), (ex+ew,ey+eh), (0,255,0), 2)
 
-        """
+ 
         if len(eyes) != 2:
             print('Detected face somehow doesn\'t have two eyes. Not drawing a box')
         else:
@@ -46,7 +46,7 @@ while 1:
                          p2 + unit - rot_unit, p2 + unit + rot_unit]
             rectangle = np.array([[int(a), int(b)] for [a, b] in rectangle])
             cv2.fillPoly(roi, np.int32([rectangle]), (0,0,0))
-        """
+
     cv2.imshow('img', img)
     k = cv2.waitKey(30) & 0xff
     if k == 27:
