@@ -53,6 +53,7 @@ for (x,y,w,h) in faces:
 
 
 cv2.imshow('Eyes detected', img)
+cv2.imwrite('BAR' + filename, img)
 
 
 cv2.waitKey(0)
